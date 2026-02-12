@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PASSWORD SECURITY AND RESILIENCE ANALYZER BY DIGITAL VAULT</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+    <h1>PASSWORD SECURITY AND RESILIENCE ANALYZER BY DIGITAL VAULT</h1>
+
+    <div class="input-section">
+        <input type="password" id="passwordInput" placeholder="Enter your password">
+        <button type="button" id="togglePassword">👁</button>
+        <button type="button" id="generatePassword">Generate</button>
+    </div>
+
+    <!-- Strength Bar -->
+    <div class="strength-container">
+        <div class="strength-bar">
+            <div id="strengthFill"></div>
+        </div>
+        <p id="strengthText">Strength: -</p>
+    </div>
+
+    <!-- Results -->
+    <div class="results">
+        <h3>Entropy: <span id="entropy">0</span> bits</h3>
+        <h3>Estimated Crack Time: <span id="crackTime">-</span></h3>
+    </div>
+
+    <div class="criteria">
+        <h3>Security Criteria</h3>
+        <ul id="criteriaList"></ul>
+    </div>
+</div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
